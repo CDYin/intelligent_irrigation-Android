@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.registerActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_registeractivity_one"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/teal_200">
+        <ImageView
+            android:id="@+id/iv_registeractivity_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="350dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:focusable="true"
+            android:layout_marginStart="350dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="80dp"
+            android:text="云灌溉记录查询系统"
+            android:textSize="25sp"/>
+        <ImageView
+            android:id="@+id/iv_registeractivity_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_left_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:onClick="onClick" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_registeractivity_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/rl_registeractivity_one"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+<!-- 第一个文本编辑框  输入用户名 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_registeractivity_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名："/>
+            <EditText
+                android:id="@+id/et_registeractivity_username"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="请输入用户名"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+<!-- 第二个文本编辑框  输入密码 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_registeractivity_password1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密    码："/>
+            <EditText
+                android:id="@+id/et_registeractivity_password1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:inputType="textPassword"
+                android:hint="请输入密码" />
+        </LinearLayout>
+<!-- 第三个文本编辑框  再次输入密码 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_registeractivity_password2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密    码："/>
+            <EditText
+                android:id="@+id/et_registeractivity_password2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="请再次输入密码"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:inputType="textPassword" />
+        </LinearLayout>
+<!-- 注册按钮 -->
+        <Button
+            android:id="@+id/bt_registeractivity_register"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="40dp"
+            android:onClick="onClick"
+            android:text="注册"
+            android:textColor="#fff"
+            app:backgroundTint="@color/teal_200" />
+    </LinearLayout>
+</RelativeLayout>
+

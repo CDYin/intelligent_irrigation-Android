@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.loginActivity"
+    android:background="@drawable/ic_background">
+
+    <RelativeLayout
+        android:id="@+id/rl_loginactivity_one"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/teal_200">
+        <ImageView
+            android:id="@+id/iv_loginactivity_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="350dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:focusable="true"
+            android:layout_marginStart="350dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="80dp"
+            android:text="云灌溉记录查询系统"
+            android:textSize="25sp"></TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_loginactivity_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_loginactivity_one"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginRight="125dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_loginactivity_username"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:text="用户名："
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/et_loginactivity_username"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="手机号/邮箱/用户名" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_loginactivity_password"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:text="密    码："
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/et_loginactivity_password"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="登录密码"
+                android:inputType="textPassword" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_loginactivity_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_loginactivity_one"
+        android:orientation="vertical"
+        android:layout_marginTop="420dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginRight="5dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_loginactivity_login"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:hint="登录"
+                android:onClick="onClick"
+                android:textSize="20dp"
+                app:backgroundTint="@color/teal_200" />
+
+            <Button
+                android:id="@+id/bt_loginactivity_regist"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:hint="注册"
+                android:onClick="onClick"
+                android:textSize="20dp"
+                app:backgroundTint="@color/teal_200" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_loginactivity_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll_loginactivity_three"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="125dp">
+        <CheckBox
+            android:id="@+id/cb_loginactivity_remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="20dp"
+            android:text="记住密码"/>
+    </LinearLayout>
+</RelativeLayout>

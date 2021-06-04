@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_recordactivity_one"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/teal_200">
+
+        <ImageView
+            android:id="@+id/iv_recordactivity_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="350dp"
+            android:layout_marginLeft="350dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="80dp"
+            android:gravity="center_vertical"
+            android:text="云灌溉记录查询系统"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/iv_recordactivity_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_left_back"
+            android:clickable="true"
+            android:onClick="onClick" />
+    </RelativeLayout>
+
+
+        <com.bin.david.form.core.SmartTable
+            android:id="@+id/record_table"
+            android:layout_below="@+id/rl_recordactivity_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.bin.david.form.core.SmartTable>
+</LinearLayout>
